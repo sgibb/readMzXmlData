@@ -1,0 +1,30 @@
+\name{.readMzXmlFile}
+\alias{.readMzXmlFile}
+\title{Reads mass spectrometry data in mzXML format.}
+\usage{
+  .readMzXmlFile(mzXmlFile, removeMetaData = FALSE,
+    verbose = FALSE)
+}
+\arguments{
+  \item{mzXmlFile}{\code{character}, path to \emph{mzXML}
+  file which should be read.}
+
+  \item{removeMetaData}{\code{logical}, to save memory
+  metadata could be deleted.}
+
+  \item{verbose}{\code{logical}, verbose output?}
+}
+\value{
+  A list of spectra and metadata.
+}
+\description{
+  Internal function.
+}
+\author{
+  Sebastian Gibb \email{mail@sebastiangibb.de}
+}
+\seealso{
+  \code{\link[readMzXmlData]{readMzXmlFile}}
+}
+\keyword{internal}
+

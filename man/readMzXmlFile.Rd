@@ -1,0 +1,55 @@
+\name{readMzXmlFile}
+\alias{readMzXmlFile}
+\title{Reads mass spectrometry data in mzXML format.}
+\usage{
+  readMzXmlFile(mzXmlFile, removeMetaData = FALSE,
+    verbose = FALSE)
+}
+\arguments{
+  \item{mzXmlFile}{\code{character}, path to \emph{mzXML}
+  file which should be read.}
+
+  \item{removeMetaData}{\code{logical}, to save memory
+  metadata could be deleted.}
+
+  \item{verbose}{\code{logical}, verbose output?}
+}
+\value{
+  A list of spectra and metadata. \itemize{
+  \item{\code{spectrum$mass}: }{A vector of calculated
+  mass.} \item{\code{spectrum$intensity}: }{A vector of
+  intensity values.} \item{\code{metaData}: }{A list of
+  metaData depending on read spectrum.} }
+}
+\description{
+  Reads mass spectrometry data in mzXML format defined in
+  \url{http://tools.proteomecenter.org/mzXMLschema.php}.
+}
+\examples{
+## load library
+library("readMzXmlData")
+
+## get examples directory
+exampleDirectory <- system.file("Examples", package="readMzXmlData")
+
+## read example spectrum
+spec <- readMzXmlFile(file.path(exampleDirectory, "A1-0_A1.mzXML"))
+
+## print metaData
+print(spec$metaData)
+
+## plot spectrum
+plot(spec$spectrum$mass, spec$spectrum$intensity, type="l")
+}
+\author{
+  Sebastian Gibb \email{mail@sebastiangibb.de}
+}
+\references{
+  Definition of \code{mzXML} format:
+  \url{http://tools.proteomecenter.org/mzXMLschema.php}
+}
+\seealso{
+  \code{\link{readMzXmlDir}}, \code{\link{mqReadMzXml}}
+}
+\keyword{IO}
+

@@ -1,0 +1,40 @@
+\name{.grepNumber}
+\alias{.grepDouble}
+\alias{.grepNumber}
+\title{Pattern matching.}
+\usage{
+  .grepNumber(x)
+
+  .grepDouble(x)
+}
+\arguments{
+  \item{x}{\code{character}, text}
+
+  \item{x}{\code{character}, text}
+}
+\value{
+  \code{numeric}, matched value
+
+  \code{double}, matched value
+}
+\description{
+  This function returns \code{numeric} values found in a
+  \code{character}.
+
+  This function returns \code{double} values found in a
+  \code{character}.
+}
+\author{
+  Sebastian Gibb \email{mail@sebastiangibb.de}
+
+  Sebastian Gibb \email{mail@sebastiangibb.de}
+}
+\seealso{
+  \code{\link[readMzXmlData]{.grepDouble}}
+  \code{\link[readMzXmlData]{.grepSubString}}
+
+  \code{\link[readMzXmlData]{.grepNumber}}
+  \code{\link[readMzXmlData]{.grepSubString}}
+}
+\keyword{internal}
+

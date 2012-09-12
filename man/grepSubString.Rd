@@ -1,0 +1,26 @@
+\name{.grepSubString}
+\alias{.grepSubString}
+\title{Pattern matching.}
+\usage{
+  .grepSubString(pattern, x)
+}
+\arguments{
+  \item{pattern}{\code{character}, regexp pattern}
+
+  \item{x}{\code{character}, text}
+}
+\value{
+  \code{character}, matched substring
+}
+\description{
+  This function returns a substring selected by a regular
+  expression.
+}
+\author{
+  Sebastian Gibb \email{mail@sebastiangibb.de}
+}
+\seealso{
+  \code{\link[readMzXmlData]{.grepNumber}}
+}
+\keyword{internal}
+

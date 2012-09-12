@@ -1,0 +1,77 @@
+\name{readMzXmlDir}
+\alias{readMzXmlDir}
+\title{Reads recursively mass spectrometry data in mzXML format.}
+\usage{
+  readMzXmlDir(mzXmlDir, removeCalibrationScans = TRUE,
+    removeMetaData = FALSE, rewriteNames = TRUE,
+    fileExtension = "mzXML", verbose = FALSE)
+}
+\arguments{
+  \item{mzXmlDir}{\code{character}, path to
+  \emph{directory} which should be read recursively.}
+
+  \item{removeCalibrationScans}{\code{logical}, if
+  \code{TRUE} all scans in directories called
+  \dQuote{[Cc]alibration} will be ignored.}
+
+  \item{removeMetaData}{\code{logical}, to save memory
+  metadata could be deleted.}
+
+  \item{rewriteNames}{\code{logical}, if \code{TRUE} all
+  list elements get an unique name from metadata otherwise
+  file path is used.}
+
+  \item{fileExtension}{\code{character}, file extension of
+  mzXML formatted files. The directory is only searched for
+  \emph{fileExtension} files.  In most cases it would be
+  \dQuote{"mzXML"} but sometimes you have to use
+  \dQuote{xml}.}
+
+  \item{verbose}{\code{logical}, verbose output?}
+}
+\value{
+  A list of spectra. \itemize{
+  \item{\code{[[1]]spectrum$mass}: }{A vector of calculated
+  mass.} \item{\code{[[1]]spectrum$intensity}: }{A vector
+  of intensity values.} \item{\code{[[1]]metaData}: }{A
+  list of metaData depending on read spectrum.} }
+}
+\description{
+  Reads recursively all mass spectrometry data in mzXML
+  format in a specified directory.
+}
+\details{
+  See \code{\link{readMzXmlFile}}.
+}
+\examples{
+## load library
+library("readMzXmlData")
+
+## get examples directory
+exampleDirectory <- system.file("Examples", package="readMzXmlData")
+
+## read example spectra
+spec <- readMzXmlDir(exampleDirectory)
+
+## plot spectra
+plot(spec[[1]]$spectrum$mass, spec[[1]]$spectrum$intensity, type="n")
+
+l <- length(spec)
+legendStr <- character(l)
+for (i in seq(along=spec)) {
+  lines(spec[[i]]$spectrum$mass, spec[[i]]$spectrum$intensity, type="l",
+        col=rainbow(l)[i])
+  legendStr[i] <- basename(spec[[i]]$metaData$file)
+}
+
+## draw legend
+legend(x="topright", legend=legendStr, col=rainbow(l), lwd=1)
+}
+\author{
+  Sebastian Gibb \email{mail@sebastiangibb.de}
+}
+\seealso{
+  \code{\link{readMzXmlFile}}, \code{\link{mqReadMzXml}}
+}
+\keyword{IO}
+

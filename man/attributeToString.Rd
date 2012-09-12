@@ -1,0 +1,32 @@
+\name{.attributeToString}
+\alias{.attributeToString}
+\title{Converts XML attributes.}
+\usage{
+  .attributeToString(attributes, attributeName,
+    required = FALSE)
+}
+\arguments{
+  \item{attributes}{\code{character}, XML attributes}
+
+  \item{attributeName}{\code{character}, name XML
+  attributes of attribute to convert}
+
+  \item{required}{\code{logical}, throw an error if an
+  required attribute is missing.}
+}
+\value{
+  \code{character}, attribute string
+}
+\description{
+  This function converts a XML attribute to
+  \code{character}.
+}
+\author{
+  Sebastian Gibb \email{mail@sebastiangibb.de}
+}
+\seealso{
+  \code{\link[readMzXmlData]{.attributeToDouble}},
+  \code{\link[readMzXmlData]{.attributeTimeToDouble}}
+}
+\keyword{internal}
+
