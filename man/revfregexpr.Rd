@@ -1,0 +1,24 @@
+\name{.revfregexpr}
+\alias{.revfregexpr}
+\title{Pattern matching.}
+\usage{
+  .revfregexpr(pattern, file)
+}
+\arguments{
+  \item{pattern}{\code{character}, string containing a
+  regular expression.}
+
+  \item{filename}{\code{character}, name of file.}
+}
+\value{
+  \code{double}, position of match.
+}
+\description{
+  This function looks for the last match to argument
+  \code{pattern} in a file \code{file}.
+}
+\author{
+  Sebastian Gibb \email{mail@sebastiangibb.de}
+}
+\keyword{internal}
+

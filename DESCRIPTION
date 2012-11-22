@@ -21,10 +21,10 @@ LazyLoad: yes
 Collate:
     'attribute-functions.R'
     'base64-functions.R'
-    'fregexpr-functions.R'
     'grep-functions.R'
     'mqReadMzXml-functions.R'
     'package.R'
     'parseMzXml.R'
     'readMzXmlDir-functions.R'
     'readMzXmlFile-functions.R'
+    'revfregexpr-functions.R'
