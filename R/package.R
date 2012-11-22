@@ -26,9 +26,9 @@
 #'  
 #'  Type: \tab Package\cr
 #'
-#'  Version: \tab 2.4\cr
+#'  Version: \tab 2.5\cr
 #'
-#'  Date: \tab 2012-09-12\cr 
+#'  Date: \tab 2012-11-22\cr
 #'
 #'  License: \tab GPL(version 3 or later)\cr
 #'

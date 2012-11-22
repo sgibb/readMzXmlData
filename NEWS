@@ -1,6 +1,11 @@
 RELEASE HISTORY OF THE "readMzXmlData" PACKAGE
 ==============================================
 
+Version 2.5 [2012-11-22]:
+- Replace .base64decode by base64::decode.
+- Replace .fregexpr by .revfregexpr (start search for sha1 sum from the end of
+  the file).
+
 Version 2.4 [2012-09-12]:
 - Fix error message if a required attribute is missing.
 - Attribute "scanCount" is now optional (as intended in mzXML specification).
