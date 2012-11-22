@@ -458,9 +458,8 @@
     peaksCount <- xml$scans[[currentScanId]]$metaData$peaksCount
 
     if (peaksCount>0) {
-      ## taken from: caMassClass 1.9 R/mzXML.R (written by Jarek Tuszynski)
-      p <- .base64decode(z=currentPeaks, what="double", endian=endian,
-                 size=size, compressionType=compressionType)
+      p <- .base64decode(x=currentPeaks, endian=endian, size=size,
+                         compressionType=compressionType)
       np <- length(p) %/% 2
 
       if (np != peaksCount) {

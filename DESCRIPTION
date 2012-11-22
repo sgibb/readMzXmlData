@@ -8,7 +8,7 @@ Authors@R: c(person("Sebastian", "Gibb", role=c("aut", "cre"),
     "Author of .base64decode and .fregexpr"))
 Depends:
     R (>= 2.14.0),
-    bitops,
+    base64enc,
     digest,
     XML
 Suggests:
