@@ -2,8 +2,7 @@
 \alias{.base64decode}
 \title{Converts base64 character to double.}
 \usage{
-  .base64decode(x, size, signed = TRUE,
-    endian = .Platform$endian,
+  .base64decode(x, size, endian = .Platform$endian,
     compressionType = c("none", "gzip"))
 }
 \arguments{
