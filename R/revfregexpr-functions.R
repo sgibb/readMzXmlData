@@ -31,7 +31,7 @@
 #' @keywords internal
 #'
 .revfregexpr <- function(pattern, file) {
-  bufferSize <- 2048L
+  bufferSize <- 1024L
   size <- file.info(file)$size
   pos <- double()
   f <- file(file, "rb")
