@@ -35,12 +35,13 @@
 #' @seealso \code{\link[base64enc]{base64decode}} from \pkg{base64enc} package
 #' @keywords internal
 #
-.base64decode <- function(x, size, signed=TRUE, endian=.Platform$endian,
+.base64decode <- function(x, size, endian=.Platform$endian,
                           compressionType=c("none", "gzip")) {
   x <- base64enc::base64decode(x)
   r <- as.raw(x)
 
-  compressionType <- match.arg(compressionType, choices=c("none", "gzip"), several.ok=FALSE)
+  compressionType <- match.arg(compressionType, choices=c("none", "gzip"), 
+                               several.ok=FALSE)
   r <- memDecompress(from=r, type=compressionType)
 
   return(readBin(r, what="double", n=length(r)%/%size, size=size, signed=TRUE,
