@@ -88,7 +88,7 @@ readMzXmlDir <- function(mzXmlDir, removeCalibrationScans=TRUE,
 
   ## look for mzXML files (alphabetical sort)
   files <- list.files(path=mzXmlDir,
-                      pattern=paste("*.", fileExtension, "$", sep=""),
+                      pattern=paste("^.*\\.", fileExtension, "$", sep=""),
                       recursive=TRUE)
 
   ## remove calibrations scans?
