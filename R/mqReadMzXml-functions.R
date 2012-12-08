@@ -41,6 +41,7 @@
 #' \code{\link[MALDIquant]{MassSpectrum-class}}
 #' @references See website: \url{http://strimmerlab.org/software/maldiquant/}
 #' @keywords IO
+#' @aliases mqReadMzXml-deprecated
 #' @rdname mqReadMzXml
 #' @export
 #' 

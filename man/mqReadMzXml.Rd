@@ -1,5 +1,6 @@
 \name{mqReadMzXml}
 \alias{mqReadMzXml}
+\alias{mqReadMzXml-deprecated}
 \title{Reads mass spectrometry data into MALDIquant.}
 \usage{
   mqReadMzXml(path, ...)
