@@ -28,7 +28,7 @@
 #'
 #'  Version: \tab 2.5\cr
 #'
-#'  Date: \tab 2012-11-22\cr
+#'  Date: \tab 2012-12-08\cr
 #'
 #'  License: \tab GPL(version 3 or later)\cr
 #'
