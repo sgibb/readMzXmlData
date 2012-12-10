@@ -1,8 +1,8 @@
 RELEASE HISTORY OF THE "readMzXmlData" PACKAGE
 ==============================================
 
-Version 2.5 [2012-11-22]:
-- Replace .base64decode by base64::decode.
+Version 2.5 [2012-12-09]:
+- Replace .base64decode by base64enc::base64decode.
 - Replace .fregexpr by .revfregexpr (start search for sha1 sum from the end of
   the file).
 
