@@ -26,9 +26,9 @@
 #'  
 #'  Type: \tab Package\cr
 #'
-#'  Version: \tab 2.5\cr
+#'  Version: \tab 2.5.2\cr
 #'
-#'  Date: \tab 2012-12-08\cr
+#'  Date: \tab 2013-01-27\cr
 #'
 #'  License: \tab GPL(version 3 or later)\cr
 #'
@@ -50,5 +50,9 @@
 #'  \code{\link{mqReadMzXml}}
 #' @references See website: \url{http://strimmerlab.org/software/maldiquant/}
 #' @keywords IO
+#'
+#' @importFrom base64enc base64decode
+#' @importFrom digest digest
+#' @importFrom XML xmlEventParse
 NULL
 
