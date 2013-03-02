@@ -47,7 +47,7 @@
 #' @return function closure
 #'
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
-#' @references 
+#' @references
 #' Definition of \code{mzXML} format:
 #' \url{http://tools.proteomecenter.org/mzXMLschema.php}
 #' @rdname mzXmlHandlers
@@ -57,7 +57,7 @@
   ## define local variables
 
   ## handle different mzXML versions
-  mzXmlVersion <- 0 
+  mzXmlVersion <- 0
 
   ## save last opened tag (needed for .text()-processing)
   openTag <- ""
@@ -73,7 +73,7 @@
   ## sha1 tmp values
   sha1Sums <- character()
   currentSha1Id <- 0
-  
+
   ## build final list
   xml <- list()
   xml$metaData <- list()
@@ -96,9 +96,9 @@
 
     ## number of scans in mzXML file
     n <- .attributeToDouble(attrs, "scanCount", required=FALSE)
-    
+
     nScans <<- ifelse(length(n), n, 1)
-    
+
     ## optional attributes
     optAttrs <- c("startTime", "endTime")
     m <- lapply(optAttrs, .attributeTimeToDouble, attributes=attrs)
@@ -109,7 +109,7 @@
     xml$metaData <<- c(scanCount=nScans, m)
   }
 
-  ## mzXML/msRun/parentFile 
+  ## mzXML/msRun/parentFile
   parentFile <- function(name, attrs) {
     if (is.null(xml$metaData$parentFile)) {
       xml$metaData$parentFile <<- list()
@@ -129,7 +129,7 @@
       xml$metaData$msInstrument <<- list()
     }
 
-    xml$metaData$msInstrument[[name]] <<- 
+    xml$metaData$msInstrument[[name]] <<-
       .attributeToString(attrs, "value")
   }
 
@@ -236,7 +236,7 @@
     reqAttrs <- c("num", "peaksCount")
     optAttrsStr <- c("polarity", "scanType", "collisionGas", "filterLine")
     optAttrsDouble <- c("centroided", "chargeDeconvoluted", "deisotoped",
-                        "ionisationEnergy", "collisionEnergy", 
+                        "ionisationEnergy", "collisionEnergy",
                         "collisionGasPressure", "cidGasPressure",
                         "startMz", "endMz", "lowMz",
                         "highMz", "basePeakMz", "basePeakIntensity",
@@ -251,8 +251,8 @@
       xml$scans[[currentScanId]]$metaData[[i]] <<-
           .attributeToDouble(attrs, i, required=TRUE)
     }
-    
-    ## msLevel is required in mzXML specification 
+
+    ## msLevel is required in mzXML specification
     ## to read malformed files missing is allowed
     msLevel <- .attributeToDouble(attrs, "msLevel", required=FALSE)
 
@@ -338,7 +338,7 @@
     for (i in optAttrs) {
       a <- .attributeToString(attrs, i)
       if (!is.na(a)) {
-        maldi[[i]] <- .attributeToString(attrs, i) 
+        maldi[[i]] <- .attributeToString(attrs, i)
       }
     }
 
@@ -368,7 +368,7 @@
 
     } else {
       contentType <- .attributeToString(attrs, "contentType", required=TRUE)
-      
+
       validContentTypes <- c("m/z-int", "m/z", "m/z ruler", "TOF", "intensity",
                              "S/N", "charge")
 
@@ -416,7 +416,7 @@
       openTag <<- name
     }
   }
-  
+
   .endElement <- function(name, attrs) {
     if (name == "peaks") {
       decodePeaks()
@@ -464,11 +464,11 @@
 
       if (np != peaksCount) {
         stop("Malformed mzXML: incorrect 'peakCount' attribute of ",
-             "'peaks' field: expected ", peaksCount, ", found ", 
+             "'peaks' field: expected ", peaksCount, ", found ",
              np, "  ",(3*((nchar(currentPeaks)*size)/4))/2, " (scan #",
              currentScanId, ")")
       }
-      
+
       dim(p) <- c(2, np)
       mass <- p[1,]
       intensity <- p[2,]
@@ -495,15 +495,15 @@
     ## multiple sha1 sections are possible
     for (i in n) {
       if (verbose) {
-        cat("Calculate sha1-sum (", i, "/", n, ") for ", sQuote(fileName), 
-            ": ", sep="")
+        message("Calculate sha1-sum (", i, "/", n, ") for ", sQuote(fileName),
+                ": ", appendLF=FALSE)
       }
 
       sha1Calc <- digest::digest(fileName, algo="sha1", file=TRUE,
                                  length=sha1Pos[i]-1)
 
       if (verbose) {
-        cat(sha1Calc, "\n")
+        message(sha1Calc)
       }
 
       if (sha1Sums[i] != sha1Calc) {

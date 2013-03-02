@@ -18,6 +18,8 @@
 
 #' Reads mass spectrometry data into MALDIquant.
 #' 
+#' This function is deprecated and will be removed in the next release.
+#' Use \code{\link[MALDIquantForeign]{importMzXml}} instead. \cr
 #' Reads all mass spectrometry data in mzXML format in a specified path into
 #' \code{\link[MALDIquant]{MALDIquant-package}}
 #' \code{\link[MALDIquant]{MassSpectrum-class}} objects.
@@ -39,25 +41,12 @@
 #' \code{\link[MALDIquant]{MassSpectrum-class}}
 #' @references See website: \url{http://strimmerlab.org/software/maldiquant/}
 #' @keywords IO
+#' @aliases mqReadMzXml-deprecated
 #' @rdname mqReadMzXml
 #' @export
-#' @examples
-#' 
-#' ## load library
-#' library("readMzXmlData")
-#' 
-#' ## get examples directory
-#' exampleDirectory <- system.file("Examples", package="readMzXmlData")
-#' 
-#' ## read example spectra
-#' spec <- mqReadMzXml(exampleDirectory)
-#' 
-#' ## plot spectra
-#' par(mfrow=c(2, 1))
-#' lapply(spec, plot)
-#' par(mfrow=c(1, 1))
 #' 
 mqReadMzXml <- function(path, ...) {
+  .Deprecated("MALDIquantForeign::importMzXml")
 
   if (!file.exists(path)) {
     stop("Path ", sQuote(path), " doesn't exists!")
