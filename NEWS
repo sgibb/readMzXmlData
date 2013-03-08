@@ -1,6 +1,9 @@
 RELEASE HISTORY OF THE "readMzXmlData" PACKAGE
 ==============================================
 
+Version 2.5.3 [2013-03-08]:
+- Remove LICENSE file
+
 Version 2.5.2 [2013-01-27]:
 - DESCRIPTION: move base64enc, digest and XML to "Imports".
 

@@ -13,9 +13,9 @@
 
   Type: \tab Package\cr
 
-  Version: \tab 2.5.2\cr
+  Version: \tab 2.5.3\cr
 
-  Date: \tab 2013-01-27\cr
+  Date: \tab 2013-03-08\cr
 
   License: \tab GPL(version 3 or later)\cr
 
