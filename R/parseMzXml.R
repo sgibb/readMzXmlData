@@ -201,7 +201,7 @@
 
     for (i in optAttrs) {
       a <- .attributeToDouble(attrs, i)
-      if (length(a) > 0 && !is.na(a)) {
+      if (length(a) && !is.na(a)) {
         xml$metaData$dataProcessing[[i]] <<- a
       }
     }
@@ -220,7 +220,7 @@
       }
     }
 
-    if (length(operations) > 0) {
+    if (length(operations)) {
       if (is.null(xml$metaData$dataProcessing$operations)) {
         xml$metaData$dataProcessing$operations <<- list()
       }
