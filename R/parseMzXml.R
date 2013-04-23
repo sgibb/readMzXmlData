@@ -465,7 +465,7 @@
       if (np != peaksCount) {
         stop("Malformed mzXML: incorrect 'peakCount' attribute of ",
              "'peaks' field: expected ", peaksCount, ", found ",
-             np, "  ",(3*((nchar(currentPeaks)*size)/4))/2, " (scan #",
+             np, "  ", (3*((nchar(currentPeaks)*size)/4))/2, " (scan #",
              currentScanId, ")")
       }
 
@@ -473,8 +473,8 @@
       mass <- p[1,]
       intensity <- p[2,]
     } else {
-      mass <- list()
-      intensity <- list()
+      mass <- double()
+      intensity <- double()
     }
 
     xml$scans[[currentScanId]]$spectrum <<- list(mass=mass, intensity=intensity)
