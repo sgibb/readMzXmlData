@@ -433,9 +433,9 @@
     if (openTag == "precursorMz") {
       xml$scans[[currentScanId]]$metaData$precursorMz <<- as.double(x)
     } else if (openTag == "peaks") {
-      currentPeaks <<- paste(currentPeaks, x, sep="")
+      currentPeaks <<- paste0(currentPeaks, x)
     } else if (openTag == "sha1") {
-      sha1Sums[currentSha1Id] <<- paste(sha1Sums[currentSha1Id], x, sep="")
+      sha1Sums[currentSha1Id] <<- paste0(sha1Sums[currentSha1Id], x)
     }
   }
 

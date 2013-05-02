@@ -17,12 +17,12 @@
 ## along with readMzXmlData. If not, see <http://www.gnu.org/licenses/>
 
 #' Reads recursively mass spectrometry data in mzXML format.
-#' 
+#'
 #' Reads recursively all mass spectrometry data in mzXML format in a specified
 #' directory.
-#' 
+#'
 #' @details See \code{\link{readMzXmlFile}}.
-#' 
+#'
 #' @param mzXmlDir \code{character}, path to \emph{directory} which should
 #'  be read recursively.
 #' @param removeCalibrationScans \code{logical}, if \code{TRUE} all scans in
@@ -33,7 +33,7 @@
 #'  an unique name from metadata otherwise file path is used.
 #' @param fileExtension \code{character}, file extension of mzXML formatted
 #'  files. The directory is only searched for \emph{fileExtension} files.
-#'  In most cases it would be \dQuote{"mzXML"} but sometimes you have to use 
+#'  In most cases it would be \dQuote{"mzXML"} but sometimes you have to use
 #'  \dQuote{xml}.
 #' @param verbose \code{logical}, verbose output?
 #'
@@ -50,19 +50,19 @@
 #' @rdname readMzXmlDir
 #' @export
 #' @examples
-#' 
+#'
 #' ## load library
 #' library("readMzXmlData")
-#' 
+#'
 #' ## get examples directory
 #' exampleDirectory <- system.file("Examples", package="readMzXmlData")
-#' 
+#'
 #' ## read example spectra
 #' spec <- readMzXmlDir(exampleDirectory)
-#' 
+#'
 #' ## plot spectra
 #' plot(spec[[1]]$spectrum$mass, spec[[1]]$spectrum$intensity, type="n")
-#' 
+#'
 #' l <- length(spec)
 #' legendStr <- character(l)
 #' for (i in seq(along=spec)) {
@@ -70,10 +70,10 @@
 #'         col=rainbow(l)[i])
 #'   legendStr[i] <- basename(spec[[i]]$metaData$file)
 #' }
-#' 
+#'
 #' ## draw legend
 #' legend(x="topright", legend=legendStr, col=rainbow(l), lwd=1)
-#' 
+#'
 readMzXmlDir <- function(mzXmlDir, removeCalibrationScans=TRUE,
   removeMetaData=FALSE, rewriteNames=TRUE, fileExtension="mzXML",
   verbose=FALSE) {
@@ -88,7 +88,7 @@ readMzXmlDir <- function(mzXmlDir, removeCalibrationScans=TRUE,
 
   ## look for mzXML files (alphabetical sort)
   files <- list.files(path=mzXmlDir,
-                      pattern=paste("^.*\\.", fileExtension, "$", sep=""),
+                      pattern=paste0("^.*\\.", fileExtension, "$"),
                       recursive=TRUE)
 
   ## remove calibrations scans?
@@ -117,7 +117,7 @@ readMzXmlDir <- function(mzXmlDir, removeCalibrationScans=TRUE,
     for (j in seq(along=mzXmlFile)) {
       spectra <- list()
       spectra$spectra <- mzXmlFile[[j]]
-      mzXmlData <- c(mzXmlData, spectra) 
+      mzXmlData <- c(mzXmlData, spectra)
     }
   }
 
@@ -127,7 +127,7 @@ readMzXmlDir <- function(mzXmlDir, removeCalibrationScans=TRUE,
       message("rewrite names ...")
     }
 
-    names(mzXmlData) <- paste("s", 1:length(mzXmlData), sep="")
+    names(mzXmlData) <- paste0("s", 1:length(mzXmlData))
   }
 
   return(mzXmlData)
