@@ -8,7 +8,7 @@ This package reads mass spectrometry data in mzXML format.
 
 ## Install
 
-```R
+```s
 install.packages("readMzXmlData")
 ```
 
