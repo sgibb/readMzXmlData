@@ -1,11 +1,9 @@
 RELEASE HISTORY OF THE "readMzXmlData" PACKAGE
 ==============================================
 
-Version 2.6.2 [2013-05-02]:
+Version 2.7 [2013-07-03]:
 - Replace all paste(..., sep="") calls by paste0;
   now readMzXmlData depends on R >= 2.15.
-
-Version 2.6.1 [2013-04-23]:
 - for empty scans mass and intensity are double() instead of list().
 
 Version 2.6 [2013-04-03]:
