@@ -1,4 +1,4 @@
-## Copyright 2012 Sebastian Gibb
+## Copyright 2012-2014 Sebastian Gibb
 ## <mail@sebastiangibb.de>
 ##
 ## This file is part of readMzXmlData for R and related languages.
@@ -26,9 +26,9 @@
 #'
 #'  Type: \tab Package\cr
 #'
-#'  Version: \tab 2.7\cr
+#'  Version: \tab 2.8\cr
 #'
-#'  Date: \tab 2013-07-03\cr
+#'  Date: \tab 2014-09-27\cr
 #'
 #'  License: \tab GPL(version 3 or later)\cr
 #'
@@ -46,13 +46,27 @@
 #' @name readMzXmlData-package
 #' @docType package
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
-#' @seealso \code{\link{readMzXmlDir}}, \code{\link{readMzXmlFile}},
-#'  \code{\link{mqReadMzXml}}
+#' @seealso \code{\link{readMzXmlDir}}, \code{\link{readMzXmlFile}}
 #' @references See website: \url{http://strimmerlab.org/software/maldiquant/}
 #' @keywords IO
 #'
 #' @importFrom base64enc base64decode
 #' @importFrom digest digest
 #' @importFrom XML xmlEventParse
+NULL
+
+#' These functions are defunct and no longer available.
+#'
+#' \describe{
+#'  \item{mqReadMzXml:}{use
+#'    \code{\link[MALDIquantForeign]{importMzXml}} instead.}
+#' }
+#'
+#' @title Removed functions in package \pkg{readMzXmlData}
+#' @keywords internal
+#' @name readMzXmlFlexData-defunct
+#' @aliases mqReadMzXml
+#' @rdname readMzXmlFlexData-defunct
+#'
 NULL
 

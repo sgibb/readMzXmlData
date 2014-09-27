@@ -45,7 +45,8 @@
 #' }
 #'
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
-#' @seealso \code{\link{readMzXmlFile}}, \code{\link{mqReadMzXml}}
+#' @seealso \code{\link{readMzXmlFile}},
+#' \code{\link[MALDIquantForeign]{importMzXml}}
 #' @keywords IO
 #' @rdname readMzXmlDir
 #' @export

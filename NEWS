@@ -1,10 +1,13 @@
 RELEASE HISTORY OF THE "readMzXmlData" PACKAGE
 ==============================================
 
+Version 2.8 [2014-09-27]:
+- mqReadMzXml is removed. Use MALDIquantForeign::importMzXml instead.
+
 Version 2.7 [2013-07-03]:
 - Replace all paste(..., sep="") calls by paste0;
   now readMzXmlData depends on R >= 2.15.
-- for empty scans mass and intensity are double() instead of list().
+- For empty scans mass and intensity are double() instead of list().
 
 Version 2.6 [2013-04-03]:
 - Remove LICENSE file.
