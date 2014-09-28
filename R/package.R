@@ -64,9 +64,9 @@ NULL
 #'
 #' @title Removed functions in package \pkg{readMzXmlData}
 #' @keywords internal
-#' @name readMzXmlFlexData-defunct
+#' @name readMzXmlData-defunct
 #' @aliases mqReadMzXml
-#' @rdname readMzXmlFlexData-defunct
+#' @rdname readMzXmlData-defunct
 #'
 NULL
 
