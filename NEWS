@@ -1,6 +1,9 @@
 RELEASE HISTORY OF THE "readMzXmlData" PACKAGE
 ==============================================
 
+Version 2.8.1 [2015-07-01]:
+- Import utils::tail.
+
 Version 2.8 [2014-09-27]:
 - mqReadMzXml is removed. Use MALDIquantForeign::importMzXml instead.
 

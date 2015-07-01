@@ -26,9 +26,9 @@
 #'
 #'  Type: \tab Package\cr
 #'
-#'  Version: \tab 2.8\cr
+#'  Version: \tab 2.8.1\cr
 #'
-#'  Date: \tab 2014-09-27\cr
+#'  Date: \tab 2015-07-01\cr
 #'
 #'  License: \tab GPL(version 3 or later)\cr
 #'
@@ -52,6 +52,7 @@
 #'
 #' @importFrom base64enc base64decode
 #' @importFrom digest digest
+#' @importFrom utils tail
 #' @importFrom XML xmlEventParse
 NULL
 
