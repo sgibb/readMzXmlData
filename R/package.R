@@ -14,7 +14,7 @@
 ## GNU General Public License for more details.
 ##
 ## You should have received a copy of the GNU General Public License
-## along with readMzXmlData. If not, see <http://www.gnu.org/licenses/>
+## along with readMzXmlData. If not, see <https://www.gnu.org/licenses/>
 
 #' The readMzXmlData Package
 #'
@@ -47,7 +47,7 @@
 #' @docType package
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
 #' @seealso \code{\link{readMzXmlDir}}, \code{\link{readMzXmlFile}}
-#' @references See website: \url{http://strimmerlab.org/software/maldiquant/}
+#' @references See website: \url{https://strimmerlab.github.io/software/maldiquant/}
 #' @keywords IO
 #'
 #' @importFrom base64enc base64decode

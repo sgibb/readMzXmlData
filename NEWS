@@ -1,6 +1,11 @@
 RELEASE HISTORY OF THE "readMzXmlData" PACKAGE
 ==============================================
 
+Version 2.8.2 [2022-11-08]:
+- Fix duplicated manual to avoid NOTE on CRAN.
+- readMzXmlData now depends on R 4.2.0.
+- Update URLs to https where possible.
+
 Version 2.8.1 [2015-09-16]:
 - Import utils::tail.
 

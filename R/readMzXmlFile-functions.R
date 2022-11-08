@@ -14,12 +14,12 @@
 ## GNU General Public License for more details.
 ##
 ## You should have received a copy of the GNU General Public License
-## along with readMzXmlData. If not, see <http://www.gnu.org/licenses/>
+## along with readMzXmlData. If not, see <https://www.gnu.org/licenses/>
 
 #' Reads mass spectrometry data in mzXML format.
 #'
 #' Reads mass spectrometry data in mzXML format defined in
-#' \url{http://tools.proteomecenter.org/mzXMLschema.php}.
+#' \url{http://tools.proteomecenter.org/wiki/index.php?title=Formats:mzXML}
 #'
 #' @param mzXmlFile \code{character}, path to \emph{mzXML} file which should
 #'  be read.
@@ -38,7 +38,7 @@
 #' @seealso \code{\link{readMzXmlDir}},
 #' \code{\link[MALDIquantForeign]{importMzXml}}
 #' @references Definition of \code{mzXML} format:
-#' \url{http://tools.proteomecenter.org/mzXMLschema.php}
+#' \url{http://tools.proteomecenter.org/wiki/index.php?title=Formats:mzXML}
 #'
 #' @keywords IO
 #' @rdname readMzXmlFile

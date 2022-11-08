@@ -14,7 +14,7 @@
 ## GNU General Public License for more details.
 ##
 ## You should have received a copy of the GNU General Public License
-## along with readMzXmlData. If not, see <http://www.gnu.org/licenses/>
+## along with readMzXmlData. If not, see <https://www.gnu.org/licenses/>
 
 #' Pattern matching.
 #'
@@ -47,7 +47,7 @@
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
 #' @seealso \code{\link[readMzXmlData]{.grepDouble}}
 #'  \code{\link[readMzXmlData]{.grepSubString}}
-#' @rdname grepNumeric
+#' @rdname grepNumber
 #' @keywords internal
 #'
 .grepNumber <- function(x) {
@@ -65,7 +65,7 @@
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
 #' @seealso \code{\link[readMzXmlData]{.grepNumber}}
 #'  \code{\link[readMzXmlData]{.grepSubString}}
-#' @rdname grepNumeric
+#' @rdname grepDouble
 #' @keywords internal
 #'
 .grepDouble <- function(x) {
