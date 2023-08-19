@@ -8,20 +8,6 @@
 The package reads mass spectrometry data in mzXML format. \cr
 }
 \details{
-\tabular{ll}{
-
- Package: \tab readMzXmlData\cr
-
- Type: \tab Package\cr
-
- Version: \tab 2.8.1\cr
-
- Date: \tab 2015-09-16\cr
-
- License: \tab GPL(version 3 or later)\cr
-
-}
-
 Main functions:
 
 \code{\link{readMzXmlFile}}: Reads mass spectrometry data in mzXML format.

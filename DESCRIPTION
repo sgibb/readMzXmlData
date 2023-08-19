@@ -1,6 +1,6 @@
 Package: readMzXmlData
-Version: 2.8.2
-Date: 2022-11-08
+Version: 2.8.3
+Date: 2023-08-19
 Title: Reads Mass Spectrometry Data in mzXML Format
 Authors@R: person("Sebastian", "Gibb", role=c("aut", "cre"),
     email="mail@sebastiangibb.de")
@@ -16,4 +16,4 @@ URL: https://strimmerlab.github.io/software/maldiquant/
     https://github.com/sgibb/readMzXmlData/
 BugReports: https://github.com/sgibb/readMzXmlData/issues/
 LazyLoad: yes
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3

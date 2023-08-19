@@ -1,6 +1,9 @@
 RELEASE HISTORY OF THE "readMzXmlData" PACKAGE
 ==============================================
 
+Version 2.8.3 [2023-08-19]:
+- Remove package version from man page.
+
 Version 2.8.2 [2022-11-08]:
 - Fix duplicated manual to avoid NOTE on CRAN.
 - readMzXmlData now depends on R 4.2.0.
