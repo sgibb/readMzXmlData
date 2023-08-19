@@ -9,7 +9,7 @@
 \arguments{
 \item{pattern}{\code{character}, string containing a regular expression.}
 
-\item{filename}{\code{character}, name of file.}
+\item{file}{\code{character}, file path.}
 }
 \value{
 \code{double}, position of match.

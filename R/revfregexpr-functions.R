@@ -22,11 +22,11 @@
 #' \code{file}.
 #'
 #' @param pattern \code{character}, string containing a regular expression.
-#' @param filename \code{character}, name of file.
+#' @param file \code{character}, file path.
 #'
 #' @return \code{double}, position of match.
 #'
-#' @rdname revfregexpr 
+#' @rdname revfregexpr
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
 #' @keywords internal
 #'
@@ -46,13 +46,13 @@
 
   for (i in seq(along=readPos)) {
     seek(f, where=readPos[i])
-    
+
     p <- gregexpr(pattern=pattern,
                   text=readChar(f, nchars=readBufferSize[i]))[[1]]
 
     if (p[1] > 0) {
       pos <- readPos[i]+tail(p, 1)
-      break 
+      break
     }
   }
   close(f)
